@@ -132,21 +132,37 @@ The application can analyze various common lab panels including:
 ## Message Examples
 
 ### Patient Message Sample:
-> Your cholesterol levels show some areas that need attention. Your total cholesterol is elevated at 262 mg/dL, and your LDL (bad) cholesterol is high at 166 mg/dL. The good news is your HDL (good) cholesterol is at a healthy level of 70 mg/dL.
+> I'm reaching out about your recent lab results, which show your cholesterol levels are still a bit high, similar to three months ago. Your total cholesterol is 262, and your LDL, sometimes called "bad" cholesterol, is 149. Both of these numbers are higher than we'd like to see. We want your total cholesterol to be under 200 and your LDL under 100. Your triglycerides, another type of fat in your blood, have also gone up slightly to 189, which is just above the normal range of under 150. The good news is your HDL, or "good" cholesterol, looks great at 80, which is even better than it was three months ago. This is helpful for your heart health.
 >
-> To help improve these numbers, focus on eating more fruits, vegetables, and whole grains. Try to include fish like salmon twice a week for healthy omega-3 fats. Limit foods high in saturated fat like red meat and full-fat dairy. Regular exercise - even 30 minutes of walking most days - can make a big difference.
+> To help bring your cholesterol and triglycerides down, focusing on your diet and exercise will be very important. For diet, try to eat more foods like fruits, vegetables, and whole grains. Foods like oatmeal, beans, and lentils are great because they have fiber that helps lower cholesterol. You should also try to eat more fish like salmon, tuna, or mackerel, which are rich in omega-3s. It's important to cut back on foods high in unhealthy fats, like fried foods, processed snacks, and fatty meats. Limiting sugary drinks and desserts will also help with your triglycerides. For exercise, try to get at least 30 minutes of moderate activity most days of the week, like brisk walking, swimming, or cycling. Even small improvements can make a big difference over time.
 >
-> We'll recheck your cholesterol in 6-8 weeks to see how you're doing. Please contact our office if you have any questions.
+> We'll want to recheck your labs in about three months to see how these changes are working. Remember, making these lifestyle adjustments is a powerful way to improve your heart health. We're here to support you every step of the way. Please contact our office if you have any questions.
 
 ### Staff Message Sample:
-> • **Results:** TC 262 mg/dL (high, ref <200), LDL 166 mg/dL (high, ref <130), HDL 70 mg/dL (normal, ref >40), TG 111 mg/dL (normal, ref <150)
-> • **Trends:** No prior data available for comparison
-> • **Risk Assessment:** Elevated cardiovascular risk due to high LDL-C, mitigated by optimal HDL-C
-> • **Clinical Significance:** Per AHA/ACC guidelines, LDL >160 mg/dL indicates high risk, consider statin therapy
-> • **Therapeutic Plan:** Lifestyle modifications (Mediterranean diet, 150 min/week exercise), consider atorvastatin 20mg daily
-> • **Follow-up:** Recheck lipid panel in 6-8 weeks, assess statin tolerance and efficacy
-> • **Patient Education:** Dietary counseling provided, exercise recommendations discussed
-> • **Documentation:** Z13.220 (screening for lipid disorders), E78.5 (hyperlipidemia, unspecified)
+> • **Results:**
+>   - **Current (2 wk ago) Lipid Panel:**
+>     - Total Cholesterol: 262 mg/dL (High; Ref: <200 mg/dL normal)
+>     - HDL-C: 80 mg/dL (Normal; Ref: >60 mg/dL optimal)
+>     - Triglycerides (TG): 189 mg/dL (Borderline; Ref: <150 mg/dL normal)
+>     - LDL-C: 149 mg/dL (High; Ref: <100 mg/dL optimal)
+>     - Cholesterol/HDL Ratio: 3.3 (Normal; Ref: Below average risk: <2.34, Average risk: 2.35-4.12)
+>     - LDL/HDL Ratio: 1.9 (Normal; Ref: Below average risk: <2.34, Average risk: 2.35-4.12)
+>     - Non-HDL-C: 182 mg/dL (High; Ref: <130 mg/dL optimal)
+>   - **Previous (3 mo ago) Lipid Panel:**
+>     - Total Cholesterol: 260 mg/dL (High; Ref: <200 mg/dL normal)
+>     - HDL-C: 70 mg/dL (Normal; Ref: >60 mg/dL optimal)
+>     - Triglycerides (TG): 111 mg/dL (Normal; Ref: <150 mg/dL normal)
+>     - LDL-C: 166 mg/dL (High; Ref: <100 mg/dL optimal)
+>     - Cholesterol/HDL Ratio: 3.7 (Normal; Ref: Below average risk: <2.34, Average risk: 2.35-4.12)
+>     - LDL/HDL Ratio: 2.4 (Borderline; Ref: Below average risk: <2.34, Average risk: 2.35-4.12)
+>     - Non-HDL-C: 190 mg/dL (High; Ref: <130 mg/dL optimal)
+> • **Trends:**
+>   - **Total Cholesterol:** Relatively stable (260 mg/dL to 262 mg/dL, +0.77% increase)
+>   - **HDL-C:** Increased from 70 mg/dL to 80 mg/dL (+14.28% increase), a favorable trend.
+>   - **Triglycerides:** Increased significantly from 111 mg/dL to 189 mg/dL (+70.27% increase), shifting from normal to borderline high. This is a concerning trend.
+>   - **LDL-C:** Decreased from 166 mg/dL to 149 mg/dL (-10.24% decrease), a favorable trend, although still significantly elevated.
+>   - **Cholesterol/HDL Ratio:** Decreased from 3.7 to 3.3 (-10.81% decrease), indicating improved overall ratio.
+>   - **LDL/HDL Ratio:** Decreased from 2.4 to 1.9 (-2
 
 ## File Structure
 
