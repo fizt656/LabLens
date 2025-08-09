@@ -398,10 +398,16 @@ Start directly with the results. End with something like "Please contact our off
 GUIDELINES:
 - Use bullet point format with comprehensive clinical details
 - Be technical and precise with medical terminology
-- Include all relevant clinical information doctors need
+- Include all relevant clinical information healthcare staff need
 - Use clinical abbreviations appropriately
-- Structure: Results • Trends • Assessment • Plan • Follow-up
+- Structure: 
+    - Results 
+    - Trends
+    - Assessment
+    - Plan
+    - Follow-up
 - Include risk stratification and clinical significance
+- make sure output is formatted nicely and easy to read, succinct.
 
 LAB DATA:
 ${JSON.stringify(labData, null, 2)}
