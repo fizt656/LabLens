@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabLens - Clinical Lab Results Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <img src="../../lablens.png" alt="LabLens Logo" class="logo">
+            </div>
+        </header>
+
+        <div class="settings-section">
+            <div class="settings-toggle">
+                <button class="settings-btn" id="settingsBtn">⚙️ Settings</button>
+            </div>
+            
+            <div class="settings-panel" id="settingsPanel" style="display: none;">
+                <div class="settings-content">
+                    <h3>LLM Provider Settings</h3>
+                    
+                    <div class="provider-selection">
+                        <label class="provider-option">
+                            <input type="radio" name="provider" value="openai" id="providerOpenAI" checked>
+                            <span>OpenAI</span>
+                        </label>
+                        <label class="provider-option">
+                            <input type="radio" name="provider" value="openrouter" id="providerOpenRouter">
+                            <span>OpenRouter</span>
+                        </label>
+                    </div>
+                    
+                    <div class="model-selection" id="modelSelection" style="display: none;">
+                        <label for="modelSelect">Model:</label>
+                        <select id="modelSelect">
+                            <!-- Options will be populated by JavaScript -->
+                        </select>
+                    </div>
+                    
+                    <div class="settings-info">
+                        <p><strong>API Keys:</strong> Set via environment variables</p>
+                        <p>• OpenAI: <code>OPENAI_API_KEY</code></p>
+                        <p>• OpenRouter: <code>OPENROUTER_API_KEY</code></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main>
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7,10 12,15 17,10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <h3>Upload Lab Results</h3>
+                        <p>Drag and drop files here or click to browse</p>
+                        <p class="file-types">Supports: PNG, JPG, PDF</p>
+                    </div>
+                </div>
+                
+                <div class="file-info" id="fileInfo" style="display: none;">
+                    <div class="file-details">
+                        <span class="file-name" id="fileName"></span>
+                        <button class="remove-file" id="removeFile"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analysis-section" id="analysisSection" style="display: none;">
+                <div class="lab-results" id="labResults">
+                    <!-- Lab results will be populated here -->
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="btn btn-primary" id="generatePatientMsg">
+                        Generate Patient Message
+                    </button>
+                    <button class="btn btn-secondary" id="generateStaffMsg">
+                        Generate Staff Message
+                    </button>
+                </div>
+            </div>
+
+            <div class="messages-section" id="messagesSection" style="display: none;">
+                <div class="message-container">
+                    <div class="message-box" id="patientMessage" style="display: none;">
+                        <div class="message-header">
+                            <h3>Patient Message</h3>
+                            <button class="copy-btn" id="copyPatientMsg">Copy</button>
+                        </div>
+                        <div class="message-content" id="patientMessageContent">
+                            <!-- Patient message will be generated here -->
+                        </div>
+                    </div>
+
+                    <div class="message-box" id="staffMessage" style="display: none;">
+                        <div class="message-header">
+                            <h3>Staff Message</h3>
+                            <button class="copy-btn" id="copyStaffMsg">Copy</button>
+                        </div>
+                        <div class="message-content" id="staffMessageContent">
+                            <!-- Staff message will be generated here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Analyzing lab results...</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
