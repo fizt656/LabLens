@@ -41,5 +41,5 @@
     "pdf-parse": "^1.1.1"
   },
   "author": "LabLens",
-  "license": "MIT"
+  "license": "GPL-3.0-or-later"
 }

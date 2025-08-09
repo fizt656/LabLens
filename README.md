@@ -213,7 +213,11 @@ Message generation logic is in `src/renderer/renderer.js`:
 
 ## License
 
-MIT License - see LICENSE file for details
+This project is licensed under the GNU General Public License v3.0. See the `LICENSE` file for details.
+
+### Commercial Licensing
+
+For organizations that wish to use LabLens in a commercial product or service but are unable to comply with the terms of the GPLv3, a commercial license is available. Please contact the author, [@fizt656](https://github.com/fizt656), on GitHub to discuss your needs.
 
 ## Support
 
