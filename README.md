@@ -7,11 +7,15 @@ LabLens is a cross-platform desktop application designed to help clinicians quic
 ## Features
 
 - **File Upload Support**: Accepts PNG, JPG, and PDF files containing lab results
-- **AI-Powered Analysis**: Extracts and interprets lab values from uploaded files
+- **AI-Powered Analysis**: Extracts and interprets lab values from uploaded files using vision-capable LLMs
+- **Multi-Provider LLM Support**: Choose between OpenAI and OpenRouter for analysis
+- **Settings Panel**: Easy configuration of AI providers and models
 - **Dual Message Generation**:
-  - **Patient Messages**: Written at 6-8th grade reading level, concise and reassuring
-  - **Staff Messages**: Clinical format with bullet points, terse and technical
+  - **Patient Messages**: Warm, comprehensive messages with lifestyle recommendations (6-8th grade reading level)
+  - **Staff Messages**: Clinical format with risk assessment, guidelines, and follow-up plans
+- **Trend Analysis**: Compares results across multiple time periods when available
 - **Easy Copy-Paste**: One-click copying for seamless workflow integration
+- **Fallback Support**: Continues working even without API keys using rule-based messages
 - **Cross-Platform**: Works on Mac, Windows, and Linux
 - **Portable**: No installation required - just download and run
 
@@ -69,7 +73,25 @@ The application supports multiple LLM providers for lab result analysis:
    ```bash
    export OPENAI_API_KEY="your-api-key-here"
    ```
-3. The application will automatically use OpenAI's GPT-4 Vision model
+3. In the application settings, select "OpenAI" as your provider
+4. The application will use OpenAI's GPT-4o Vision model
+
+#### OpenRouter (Alternative)
+
+1. Get an API key from [OpenRouter](https://openrouter.ai/keys)
+2. Set the environment variable:
+   ```bash
+   export OPENROUTER_API_KEY="your-api-key-here"
+   ```
+3. In the application settings, select "OpenRouter" as your provider
+4. Choose from available models like GPT-4o, Claude 3.5 Sonnet, Gemini Pro Vision, or Llama 3.2 90B Vision
+
+#### Settings Panel
+
+- Click the settings icon (⚙️) in the top-right corner to access configuration
+- Switch between OpenAI and OpenRouter providers
+- Select specific models when using OpenRouter
+- Settings are automatically saved and persist between sessions
 
 #### Development Mode
 
@@ -110,19 +132,21 @@ The application can analyze various common lab panels including:
 ## Message Examples
 
 ### Patient Message Sample:
-> Your recent cholesterol test shows some levels that are higher than we would like to see. Your total cholesterol is elevated at 262 mg/dL. We recommend keeping this below 200 mg/dL. Your LDL (bad) cholesterol is high at 166 mg/dL. This is the type of cholesterol that can build up in your arteries. The good news is your HDL (good) cholesterol is at a healthy level of 70 mg/dL.
+> Your cholesterol levels show some areas that need attention. Your total cholesterol is elevated at 262 mg/dL, and your LDL (bad) cholesterol is high at 166 mg/dL. The good news is your HDL (good) cholesterol is at a healthy level of 70 mg/dL.
+>
+> To help improve these numbers, focus on eating more fruits, vegetables, and whole grains. Try to include fish like salmon twice a week for healthy omega-3 fats. Limit foods high in saturated fat like red meat and full-fat dairy. Regular exercise - even 30 minutes of walking most days - can make a big difference.
+>
+> We'll recheck your cholesterol in 6-8 weeks to see how you're doing. Please contact our office if you have any questions.
 
 ### Staff Message Sample:
-> **Lipid Panel Results:**
-> • Total Cholesterol: 262 mg/dL (HIGH) [Ref: <200]
-> • LDL Cholesterol: 166 mg/dL (HIGH) [Ref: <130]
-> • HDL Cholesterol: 70 mg/dL [Ref: >40]
-> • Triglycerides: 111 mg/dL [Ref: <150]
-> 
-> **Recommendations:**
-> • Lifestyle modifications: diet, exercise, weight management
-> • Recheck lipid panel in 6-8 weeks
-> • Consider statin therapy if lifestyle changes insufficient
+> • **Results:** TC 262 mg/dL (high, ref <200), LDL 166 mg/dL (high, ref <130), HDL 70 mg/dL (normal, ref >40), TG 111 mg/dL (normal, ref <150)
+> • **Trends:** No prior data available for comparison
+> • **Risk Assessment:** Elevated cardiovascular risk due to high LDL-C, mitigated by optimal HDL-C
+> • **Clinical Significance:** Per AHA/ACC guidelines, LDL >160 mg/dL indicates high risk, consider statin therapy
+> • **Therapeutic Plan:** Lifestyle modifications (Mediterranean diet, 150 min/week exercise), consider atorvastatin 20mg daily
+> • **Follow-up:** Recheck lipid panel in 6-8 weeks, assess statin tolerance and efficacy
+> • **Patient Education:** Dietary counseling provided, exercise recommendations discussed
+> • **Documentation:** Z13.220 (screening for lipid disorders), E78.5 (hyperlipidemia, unspecified)
 
 ## File Structure
 
